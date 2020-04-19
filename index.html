@@ -12,29 +12,57 @@
         <div class="left">
             <div>time</div>
             <div>date</div>
+            <div>code</div>
             <div>social</div>
             <div>media</div>
             <div>mail</div>
+            <div>drive</div>
         </div>
 
         <div class="right">
             <div class="in" id="time">
             </div>
             <div class="in" id="date">
-                <p id="date"></p>
             </div>
-            <div class="in"><a href="http://reddit.com">reddit</a> <div class="slash">//</div> <a href="http://instagram.com">instagram</a></div>
-            <div class="in"><a href="http://youtube.com">youtube</a> <div class="slash">//</div> <a href="http://twitch.tv">twitch</a></div>
-            <div class="in"><a href="http://gmail.com">gmail</a> <div class="slash">
+            <div class="in">
+                <a href="https://gitlab.com">gitlab</a> <div class="slash">//</div> 
+                <a href="https://github.com">github</a> <div class="slash">//</div> 
+                <a href="https://gitlab.fbk.eu">gitlabWork</a> <div class="slash">//</div> 
+                <a href="https://3.basecamp.com/4423576/">basecamp</a></div>
+            <div class="in">
+                <a href="https://reddit.com">reddit</a> <div class="slash">//</div>
+                <a href="https://instagram.com">instagram</a>
+            </div>
+            <div class="in">
+                <a href="https://youtube.com">youtube</a> <div class="slash">//</div> 
+                <a href="https://twitch.tv">twitch</a>
+            </div>
+            <div class="in">
+                <a href="https://mail.google.com/mail/u/0/">first</a> <div class="slash">//</div>
+                <a href="https://mail.google.com/mail/u/1/">second</a> <div class="slash">//</div>
+                <a href="https://mail.google.com/mail/u/2/">uni</a> <div class="slash">//</div>
+                <a href="https://mail.google.com/mail/u/3/">work</a> 
+            </div>
+            <div class="in">
+                <a href="https://drive.google.com/drive/u/0/">first</a> <div class="slash">//</div>
+                <a href="https://drive.google.com/drive/u/1/">second</a> <div class="slash">//</div>
+                <a href="https://drive.google.com/drive/u/2/">uni</a> <div class="slash">//</div>
+                <a href="https://drive.google.com/drive/u/3/">work</a> 
+            </div>
         </div>
     </div>
+
     <script>
-        let t = new Date();
-        t = t.getHours().toString() + ":" +  t.getMinutes().toString();
-        document.getElementById("time").innerHTML = t;
-        let d = new Date();
-        d = d.getDay().toString() + "-" + d.getMonth() + "-" + d.getFullYear();
-        document.getElementById("date").innerHTML = d;
+        let update = () => {
+            let t = new Date();
+            t = t.getHours().toString() + ":" +  t.getMinutes().toString() + ":" +  t.getSeconds().toString();
+            document.getElementById("time").innerHTML = t;
+            let d = new Date();
+            d = d.getDate().toString() + "-" + d.getMonth() + "-" + d.getFullYear();
+            document.getElementById("date").innerHTML = d;
+        }
+        update();
+        setInterval(update,1000);
     </script>
 </body>
 </html>

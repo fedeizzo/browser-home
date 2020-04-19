@@ -1,6 +1,6 @@
 #bg {
     position: absolute;
-    background-color: #1e1e1e;
+    background-color: #2E3440;
     width: 100%;
     height: auto;
     bottom: 0px;
@@ -12,7 +12,7 @@
 }
 
 #home {
-    color:white;
+    color: #D8DEE9;
     width: 99%;
     height: auto;
     display: flex;
@@ -23,7 +23,7 @@
     font-size: 24px;
     }
 
-.left { color: #FF4500 !important; }
+.left { color: #BF616A !important; }
 
 #home > * {
     display: inline-block;
@@ -46,6 +46,6 @@ a {
 
 a:active, a:focus { outline: 0; }
 
-a:hover { color: violet; }
+a:hover { color: #B48EAD; }
 
-.slash { display: inline; color: yellow; }
+.slash { display: inline; color: #A3BE8C; }
